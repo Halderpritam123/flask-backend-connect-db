@@ -1,0 +1,35 @@
+<!-- dish-list.component.html -->
+<div class="container">
+    <h2 class="title">Dish List</h2>
+    <ul class="dish-list">
+      <li *ngFor="let dish of dishes" class="dish-item">
+        <div class="dish-info">
+          <strong class="dish-name">{{ dish.name }}</strong>
+          <p class="dish-details">
+            <span class="dish-price">Price: {{ dish.price | currency }}</span>
+            <span class="dish-availability">Availability: {{ dish.availability ? 'Available' : 'Not Available' }}</span>
+          </p>
+        </div>
+        <div class="dish-actions">
+          <button class="btn-toggle-availability" (click)="updateAvailability(dish)">Toggle Availability</button>
+          <button class="btn-delete" (click)="deleteDish(dish)">Delete</button>
+        </div>
+      </li>
+    </ul>
+    <form class="add-dish-form" (submit)="addDish()">
+      <div class="form-group">
+        <label for="name">Dish Name:</label>
+        <input type="text" id="name" [(ngModel)]="newDish.name" [ngModelOptions]="{ standalone: true }" required>
+      </div>
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" [(ngModel)]="newDish.price" [ngModelOptions]="{ standalone: true }" required>
+      </div>
+      <div class="form-group">
+        <label for="availability">Availability:</label>
+        <input type="checkbox" id="availability" [(ngModel)]="newDish.availability" [ngModelOptions]="{ standalone: true }">
+      </div>
+      <button type="submit" class="btn-add-dish">Add Dish</button>
+    </form>
+  </div>
+  

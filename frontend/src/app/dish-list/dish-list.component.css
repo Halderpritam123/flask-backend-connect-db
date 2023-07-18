@@ -1,0 +1,95 @@
+/* dish-list.component.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .dish-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dish-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .dish-name {
+    font-size: 18px;
+  }
+  
+  .dish-details {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .dish-actions {
+    display: flex;
+  }
+  
+  .btn-toggle-availability,
+  .btn-delete {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-toggle-availability {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .btn-delete {
+    background-color: #f44336;
+    color: #fff;
+  }
+  
+  .add-dish-form {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .form-group {
+    margin-right: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  input[type="checkbox"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  input[type="checkbox"] {
+    margin-top: 8px;
+  }
+  
+  .btn-add-dish {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196f3;
+    color: #fff;
+    cursor: pointer;
+  }
+  
